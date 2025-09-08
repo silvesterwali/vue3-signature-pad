@@ -16,7 +16,7 @@ importers:
         version: 5.1.5
       signature_pad:
         specifier: ^5.0.4
-        version: 5.0.4
+        version: 5.1.0
     devDependencies:
       '@antfu/eslint-config':
         specifier: ^5.2.2
@@ -2327,6 +2327,9 @@ packages:
 
   signature_pad@5.0.4:
     resolution: {integrity: sha512-nngOixbwLAUOuH3QnZwlgwmynQblxmo4iWacKFwfymJfiY+Qt+9icNtcIe/okqXKun4hJ5QTFmHyC7dmv6lf2w==}
+
+  signature_pad@5.1.0:
+    resolution: {integrity: sha512-h9rIm0vZggb/wWiajLzrH0Md+YntTHIo2dUFm6mfYAIItD75yzpiIHa1HcRA9NhQqPBix2KF8TIIA9vaokomBw==}
 
   sisteransi@1.0.5:
     resolution: {integrity: sha512-bLGGlR1QxBcynn2d5YmDX4MGjlZvy2MRBDRNHLJ8VI6l6+9FUiyTFNJ0IveOSP0bcXgVDPRcfGqA0pjaqUpfVg==}
@@ -5009,6 +5012,8 @@ snapshots:
   signal-exit@4.1.0: {}
 
   signature_pad@5.0.4: {}
+
+  signature_pad@5.1.0: {}
 
   sisteransi@1.0.5: {}
 

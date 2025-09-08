@@ -13,7 +13,7 @@ importers:
         version: 1.4.0(vue@3.5.13(typescript@5.7.3))
       nanoid:
         specifier: ^5.0.9
-        version: 5.0.9
+        version: 5.1.5
       signature_pad:
         specifier: ^5.0.4
         version: 5.0.4
@@ -2127,6 +2127,11 @@ packages:
 
   nanoid@5.0.9:
     resolution: {integrity: sha512-Aooyr6MXU6HpvvWXKoVoXwKMs/KyVakWwg7xQfv5/S/RIgJMy0Ifa45H9qqYy7pTCszrHzP21Uk4PZq2HpEM8Q==}
+    engines: {node: ^18 || >=20}
+    hasBin: true
+
+  nanoid@5.1.5:
+    resolution: {integrity: sha512-Ir/+ZpE9fDsNH0hQ3C68uyThDXzYcim2EqcZ8zn8Chtt1iylPT9xXJB0kPCnqzgcEGikO9RxSrh63MsmVCU7Fw==}
     engines: {node: ^18 || >=20}
     hasBin: true
 
@@ -5001,6 +5006,8 @@ snapshots:
   nanoid@3.3.11: {}
 
   nanoid@5.0.9: {}
+
+  nanoid@5.1.5: {}
 
   natural-compare@1.4.0: {}
 

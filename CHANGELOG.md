@@ -1,6 +1,19 @@
 # Changelog
 
 
+## v1.4.2
+
+[compare changes](https://github.com/selemondev/vue3-signature-pad/compare/v1.3.2...v1.4.2)
+
+### 🏡 Chore
+
+- Update pkg version ([8dfbbbb](https://github.com/selemondev/vue3-signature-pad/commit/8dfbbbb))
+- Refactor release script ([0f7480b](https://github.com/selemondev/vue3-signature-pad/commit/0f7480b))
+
+### ❤️ Contributors
+
+- Selemondev <selemondev19@gmail.com>
+
 ## v1.3.2
 
 [compare changes](https://github.com/selemondev/vue3-signature-pad/compare/v1.4.0...v1.3.2)

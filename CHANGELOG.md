@@ -1,6 +1,32 @@
 # Changelog
 
 
+## v1.3.2
+
+[compare changes](https://github.com/selemondev/vue3-signature-pad/compare/v1.4.0...v1.3.2)
+
+### 📖 Documentation
+
+- Update package install commands ([e160d24](https://github.com/selemondev/vue3-signature-pad/commit/e160d24))
+
+### 🏡 Chore
+
+- Update dependencies ([bf66e8b](https://github.com/selemondev/vue3-signature-pad/commit/bf66e8b))
+- Set npm as the package ecosystem for Dependabot ([84c49bf](https://github.com/selemondev/vue3-signature-pad/commit/84c49bf))
+- **deps-dev:** Bump npm-run-all2 from 6.2.6 to 8.0.4 ([60472af](https://github.com/selemondev/vue3-signature-pad/commit/60472af))
+- **deps-dev:** Bump @antfu/eslint-config from 3.16.0 to 5.2.2 ([d6c3706](https://github.com/selemondev/vue3-signature-pad/commit/d6c3706))
+- **deps-dev:** Bump typescript from 5.3.3 to 5.7.3 ([955077c](https://github.com/selemondev/vue3-signature-pad/commit/955077c))
+- **deps-dev:** Bump eslint from 9.20.0 to 9.35.0 ([6da3029](https://github.com/selemondev/vue3-signature-pad/commit/6da3029))
+- **deps-dev:** Bump @types/node from 20.17.47 to 24.3.1 ([8178364](https://github.com/selemondev/vue3-signature-pad/commit/8178364))
+- **deps-dev:** Bump @tsconfig/node20 from 20.1.5 to 20.1.6 ([9c7ca66](https://github.com/selemondev/vue3-signature-pad/commit/9c7ca66))
+- **deps-dev:** Bump vite from 5.4.19 to 7.1.5 ([bad24ea](https://github.com/selemondev/vue3-signature-pad/commit/bad24ea))
+- **deps-dev:** Bump tsup from 8.3.6 to 8.5.0 ([958186b](https://github.com/selemondev/vue3-signature-pad/commit/958186b))
+
+### ❤️ Contributors
+
+- Selemondev <selemondev19@gmail.com>
+- Selemon Brahanu ([@selemondev](https://github.com/selemondev))
+
 ## v1.3.1
 
 [compare changes](https://github.com/selemondev/vue3-signature-pad/compare/v1.3.0...v1.3.1)

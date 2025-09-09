@@ -4,13 +4,44 @@
  </h1>
 </p>
 
-A Vue 3 based smooth signature drawing component.
+<!-- automd:badges color="green" license name="@selemondev/vue3-signature-pad" codecov bundlephobia packagephobia -->
+
+[![npm version](https://img.shields.io/npm/v/@selemondev/vue3-signature-pad?color=green)](https://npmjs.com/package/@selemondev/vue3-signature-pad)
+[![npm downloads](https://img.shields.io/npm/dm/@selemondev/vue3-signature-pad?color=green)](https://npm.chart.dev/@selemondev/vue3-signature-pad)
+[![bundle size](https://img.shields.io/bundlephobia/minzip/@selemondev/vue3-signature-pad?color=green)](https://bundlephobia.com/package/@selemondev/vue3-signature-pad)
+[![install size](https://badgen.net/packagephobia/install/@selemondev/vue3-signature-pad?color=green)](https://packagephobia.com/result?p=@selemondev/vue3-signature-pad)
+[![codecov](https://img.shields.io/codecov/c/gh/selemondev/vue3-signature-pad?color=green)](https://codecov.io/gh/selemondev/vue3-signature-pad)
+[![license](https://img.shields.io/github/license/selemondev/vue3-signature-pad?color=green)](https://github.com/selemondev/vue3-signature-pad/blob/main/LICENSE)
+
+<!-- /automd -->
+
 
 ## Installation
 
-```bash
+<!-- automd:pm-install name="@selemondev/vue3-signature-pad" -->
+
+```sh
+# ✨ Auto-detect
+npx nypm install @selemondev/vue3-signature-pad
+
+# npm
 npm install @selemondev/vue3-signature-pad
+
+# yarn
+yarn add @selemondev/vue3-signature-pad
+
+# pnpm
+pnpm install @selemondev/vue3-signature-pad
+
+# bun
+bun install @selemondev/vue3-signature-pad
+
+# deno
+deno install @selemondev/vue3-signature-pad
 ```
+
+<!-- /automd -->
+
 
 ## Usage
 

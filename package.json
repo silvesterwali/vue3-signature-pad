@@ -41,7 +41,7 @@
     "dev": "tsup --watch --onSuccess \"pnpm build:dts && pnpm --filter website dev\"",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "generate:release": "npx changelogen@latest --release && npm publish",
+    "generate:release": "pnpx changelogen@latest --release && npm publish",
     "prepublishOnly": "pnpm build"
   },
   "peerDependencies": {

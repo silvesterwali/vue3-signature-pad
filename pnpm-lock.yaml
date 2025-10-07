@@ -10,7 +10,7 @@ importers:
     dependencies:
       '@selemondev/vue3-signature-pad':
         specifier: ^1.4.0
-        version: 1.4.0(vue@3.5.21(typescript@5.9.2))
+        version: 1.4.2(vue@3.5.21(typescript@5.9.2))
       nanoid:
         specifier: ^5.0.9
         version: 5.1.6
@@ -50,7 +50,7 @@ importers:
         version: 0.0.2
       '@selemondev/vue3-signature-pad':
         specifier: ^1.4.0
-        version: 1.4.0(vue@3.5.21(typescript@5.9.2))
+        version: 1.4.2(vue@3.5.21(typescript@5.9.2))
       shiki-block-vue:
         specifier: ^1.0.5
         version: 1.0.5(@vue/tsconfig@0.7.0(typescript@5.9.2)(vue@3.5.21(typescript@5.9.2)))(vite@7.1.5(@types/node@24.3.1)(jiti@1.21.7)(yaml@2.8.1))(vue-tsc@2.2.10(typescript@5.9.2))(vue@3.5.21(typescript@5.9.2))
@@ -572,8 +572,8 @@ packages:
   '@selemondev/shiki-transformer-copy-button@0.0.2':
     resolution: {integrity: sha512-tBO3XW5BotqwQJUDMK0lJecjhVTff7dCM644dc509IfEjVzB1EsCmjv7d3Ps9JyF1VatSF3gZ7TCOdY+hTxsgw==}
 
-  '@selemondev/vue3-signature-pad@1.4.0':
-    resolution: {integrity: sha512-2FiQw+AmnOHlYucmOM9urotVu+WjyhMuWNy7XsIZmviW93o0dqNw+bcrCQ0qNMmNvFC7oGIVJoJalvmCdj2Jtw==}
+  '@selemondev/vue3-signature-pad@1.4.2':
+    resolution: {integrity: sha512-XDgGmtbeMpC4ooJutTMbDDYRzN76Q62cd/+Rdm9vw2NtF6KRq+z0NJCSrht3g7ozMlDoVY47S82r47lHPqIEaw==}
     peerDependencies:
       vue: ^3.2.0
 
@@ -2064,9 +2064,6 @@ packages:
     resolution: {integrity: sha512-bzyZ1e88w9O1iNJbKnOlvYTrWPDl46O1bG0D3XInv+9tkPrxrN8jUUTiFlDkkmKWgn1M6CfIA13SuGqOa9Korw==}
     engines: {node: '>=14'}
 
-  signature_pad@5.0.4:
-    resolution: {integrity: sha512-nngOixbwLAUOuH3QnZwlgwmynQblxmo4iWacKFwfymJfiY+Qt+9icNtcIe/okqXKun4hJ5QTFmHyC7dmv6lf2w==}
-
   signature_pad@5.1.0:
     resolution: {integrity: sha512-h9rIm0vZggb/wWiajLzrH0Md+YntTHIo2dUFm6mfYAIItD75yzpiIHa1HcRA9NhQqPBix2KF8TIIA9vaokomBw==}
 
@@ -2808,10 +2805,10 @@ snapshots:
     dependencies:
       hastscript: 9.0.0
 
-  '@selemondev/vue3-signature-pad@1.4.0(vue@3.5.21(typescript@5.9.2))':
+  '@selemondev/vue3-signature-pad@1.4.2(vue@3.5.21(typescript@5.9.2))':
     dependencies:
       nanoid: 5.1.6
-      signature_pad: 5.0.4
+      signature_pad: 5.1.0
       vue: 3.5.21(typescript@5.9.2)
 
   '@shikijs/core@2.5.0':
@@ -4560,8 +4557,6 @@ snapshots:
       '@types/hast': 3.0.4
 
   signal-exit@4.1.0: {}
-
-  signature_pad@5.0.4: {}
 
   signature_pad@5.1.0: {}
 

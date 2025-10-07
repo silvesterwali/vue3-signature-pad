@@ -51,9 +51,9 @@ importers:
       '@selemondev/vue3-signature-pad':
         specifier: ^1.4.0
         version: 1.4.0(vue@3.5.21(typescript@5.9.2))
-      shiki-code-block-vue:
-        specifier: 0.0.6-beta.1
-        version: 0.0.6-beta.1(@vue/tsconfig@0.7.0(typescript@5.9.2)(vue@3.5.21(typescript@5.9.2)))(shiki@2.5.0)(vue-tsc@2.2.10(typescript@5.9.2))(vue@3.5.21(typescript@5.9.2))
+      shiki-block-vue:
+        specifier: ^1.0.5
+        version: 1.0.5(@vue/tsconfig@0.7.0(typescript@5.9.2)(vue@3.5.21(typescript@5.9.2)))(vite@7.1.5(@types/node@24.3.1)(jiti@1.21.7)(yaml@2.8.1))(vue-tsc@2.2.10(typescript@5.9.2))(vue@3.5.21(typescript@5.9.2))
       vue:
         specifier: ^3.5.14
         version: 3.5.21(typescript@5.9.2)
@@ -2058,13 +2058,13 @@ packages:
     resolution: {integrity: sha512-ObmnIF4hXNg1BqhnHmgbDETF8dLPCggZWBjkQfhZpbszZnYur5DUljTcCHii5LC3J5E0yeO/1LIMyH+UvHQgyw==}
     engines: {node: '>= 0.4'}
 
-  shiki-code-block-vue@0.0.6-beta.1:
-    resolution: {integrity: sha512-/PWTwE0V8VJtRzrylB9wM6U/6dibiU21jpp61sIwFudVhWbR8W22T6UawgaaouZ0rYSCiJ7pGAe5eIiHVKeZCg==}
+  shiki-block-vue@1.0.5:
+    resolution: {integrity: sha512-Xq1c7eXm6LsKsHufNRvwzNadvELVL5eGonlUGEeTbIFun/9ppRlckyQvbDsShC3cYbMcWHMA5E8zifxjXtXh1g==}
     peerDependencies:
-      '@vue/tsconfig': ^0.7.0
-      shiki: ^2.0.3
-      vue: ^3.2.0
-      vue-tsc: ^2.2.0
+      '@vue/tsconfig': ^0.7.0 || ^0.8.1
+      vite: ^4.0.0 || ^5.0.0 || ^7.0.0
+      vue: ^3
+      vue-tsc: ^2.2.0 || ^3.0.6
 
   shiki@2.5.0:
     resolution: {integrity: sha512-mI//trrsaiCIPsja5CNfsyNOqgAZUb6VpJA+340toL42UpzQlXpwRV9nch69X6gaUxrr9kaOOa6e3y3uAkGFxQ==}
@@ -4558,10 +4558,10 @@ snapshots:
 
   shell-quote@1.8.3: {}
 
-  shiki-code-block-vue@0.0.6-beta.1(@vue/tsconfig@0.7.0(typescript@5.9.2)(vue@3.5.21(typescript@5.9.2)))(shiki@2.5.0)(vue-tsc@2.2.10(typescript@5.9.2))(vue@3.5.21(typescript@5.9.2)):
+  shiki-block-vue@1.0.5(@vue/tsconfig@0.7.0(typescript@5.9.2)(vue@3.5.21(typescript@5.9.2)))(vite@7.1.5(@types/node@24.3.1)(jiti@1.21.7)(yaml@2.8.1))(vue-tsc@2.2.10(typescript@5.9.2))(vue@3.5.21(typescript@5.9.2)):
     dependencies:
       '@vue/tsconfig': 0.7.0(typescript@5.9.2)(vue@3.5.21(typescript@5.9.2))
-      shiki: 2.5.0
+      vite: 7.1.5(@types/node@24.3.1)(jiti@1.21.7)(yaml@2.8.1)
       vue: 3.5.21(typescript@5.9.2)
       vue-tsc: 2.2.10(typescript@5.9.2)
 

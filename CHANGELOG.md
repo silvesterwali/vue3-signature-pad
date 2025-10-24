@@ -1,6 +1,25 @@
 # Changelog
 
 
+## v1.5.0
+
+[compare changes](https://github.com/selemondev/vue3-signature-pad/compare/v1.4.2...v1.5.0)
+
+### 🚀 Enhancements
+
+- Add quality option ([be45f98](https://github.com/selemondev/vue3-signature-pad/commit/be45f98))
+
+### 🏡 Chore
+
+- **release:** V1.4.2 ([a1025b2](https://github.com/selemondev/vue3-signature-pad/commit/a1025b2))
+- **website:** Remove deprecated pkg ([2ad43ae](https://github.com/selemondev/vue3-signature-pad/commit/2ad43ae))
+- **deps-dev:** Bump @vitejs/plugin-vue from 5.2.4 to 6.0.1 ([992b374](https://github.com/selemondev/vue3-signature-pad/commit/992b374))
+- Lint and add default quality value ([f4814b6](https://github.com/selemondev/vue3-signature-pad/commit/f4814b6))
+
+### ❤️ Contributors
+
+- Selemondev <selemondev19@gmail.com>
+
 ## v1.4.2
 
 [compare changes](https://github.com/selemondev/vue3-signature-pad/compare/v1.3.2...v1.4.2)

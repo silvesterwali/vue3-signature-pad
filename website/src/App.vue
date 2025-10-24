@@ -2,7 +2,6 @@
 <script setup lang='ts'>
 import type { Signature } from '@selemondev/vue3-signature-pad'
 import { VueSignaturePad } from '@selemondev/vue3-signature-pad'
-import { nanoid } from 'nanoid'
 import { onMounted, ref } from 'vue'
 import CustomCodeBlock from './components/CustomCodeBlock.vue'
 import EventsTable from './components/EventsTable.vue'

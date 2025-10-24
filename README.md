@@ -15,7 +15,6 @@
 
 <!-- /automd -->
 
-
 ## Installation
 
 <!-- automd:pm-install name="@selemondev/vue3-signature-pad" -->
@@ -41,7 +40,6 @@ deno install @selemondev/vue3-signature-pad
 ```
 
 <!-- /automd -->
-
 
 ## Usage
 

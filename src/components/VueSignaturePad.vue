@@ -55,9 +55,10 @@ function isCanvasEmpty(): boolean {
 }
 
 function saveSignature(format?: string, quality = 1.0): string {
-  return format || quality
-    ? canvasOptions.value.signaturePad.toDataURL(format, quality)
-    : canvasOptions.value.signaturePad?.toDataURL()
+  if (format !== undefined || quality !== 1.0) {
+    return canvasOptions.value.signaturePad.toDataURL(format, quality)
+  }
+  return canvasOptions.value.signaturePad?.toDataURL()
 }
 
 function clearCanvas() {

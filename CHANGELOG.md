@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v1.6.0
+
+[compare changes](https://github.com/selemondev/vue3-signature-pad/compare/v1.5.1...v1.6.0)
+
+### 🚀 Enhancements
+
+- Emit canvas data ([8d9acc1](https://github.com/selemondev/vue3-signature-pad/commit/8d9acc1))
+
+### ❤️ Contributors
+
+- Selemondev <selemondev19@gmail.com>
+
 ## v1.5.0
 
 [compare changes](https://github.com/selemondev/vue3-signature-pad/compare/v1.4.2...v1.5.0)

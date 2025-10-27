@@ -1,5 +1,5 @@
 <!-- eslint-disable no-alert -->
-<script setup lang='ts'>
+<script setup lang="ts">
 import type { Signature } from '@selemondev/vue3-signature-pad'
 import { VueSignaturePad } from '@selemondev/vue3-signature-pad'
 import { onMounted, ref } from 'vue'
@@ -118,7 +118,7 @@ function handleAddWaterMark() {
     sx: 830,
     sy: 380,
   })
-};
+}
 
 function handleAddWaterMarkLaptop() {
   return signatureWaterMarkLaptop.value?.addWaterMark({
@@ -149,8 +149,12 @@ function handleAddWaterMarkTablet() {
 }
 
 const installCmd = ref(`npm install @selemondev/vue3-signature-pad`)
-const localImportSnippet = ref(`import { VueSignaturePad } from '@selemondev/vue3-signature-pad'`)
-const nuxiSnippet = ref(`npx nuxi@latest module add @selemondev/nuxt-signature-pad`)
+const localImportSnippet = ref(
+  `import { VueSignaturePad } from '@selemondev/vue3-signature-pad'`,
+)
+const nuxiSnippet = ref(
+  `npx nuxi@latest module add @selemondev/nuxt-signature-pad`,
+)
 const vueSignaturePadTypes = ref(`export interface Point {
   x: number
   y: number
@@ -372,7 +376,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class=" bg-[#eee]">
+  <div class="bg-[#eee]">
     <div class="max-w-screen-lg px-4 py-6 mx-auto space-y-4">
       <div class="space-y-2 md:flex md:justify-between">
         <div>
@@ -385,10 +389,15 @@ onMounted(() => {
         </div>
         <div class="flex items-center gap-1">
           <a
-            href="https://x.com/selemondev" target="_blank"
+            href="https://x.com/selemondev"
+            target="_blank"
             class="bg-black text-xs font-semibold text-white px-2.5 py-1 rounded-md inline-flex items-center hover:bg-black/80 transition-all duration-200 ease-in"
           >
-            <svg class="mr-1 size-4 shrink-0" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <svg
+              class="mr-1 size-4 shrink-0"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
               <path
                 fill="currentColor"
                 d="M8 2H1l8.26 11.015L1.45 22H4.1l6.388-7.349L16 22h7l-8.608-11.478L21.8 2h-2.65l-5.986 6.886zm9 18L5 4h2l12 16z"
@@ -397,7 +406,8 @@ onMounted(() => {
             @selemondev
           </a>
           <a
-            href="https://github.com/selemondev/vue3-signature-pad" target="_blank"
+            href="https://github.com/selemondev/vue3-signature-pad"
+            target="_blank"
             class="bg-black text-xs font-semibold text-white px-2.5 py-1 rounded-md inline-flex items-center hover:bg-black/80 transition-all duration-200 ease-in"
           >
             <GithubIcon class="mr-1 size-4" />
@@ -410,59 +420,104 @@ onMounted(() => {
           <div class="relative bg-gray-100 rounded-md">
             <div class="hidden lg:block">
               <VueSignaturePad
-                ref="signatureLaptop" height="400px" width="950px" :max-width="options.maxWidth"
-                :clear-on-resize="false" :min-width="options.minWidth" :options="{
-                  penColor: options.penColor, backgroundColor: options.backgroundColor,
+                ref="signatureLaptop"
+                height="400px"
+                width="950px"
+                :max-width="options.maxWidth"
+                :clear-on-resize="false"
+                :min-width="options.minWidth"
+                :options="{
+                  penColor: options.penColor,
+                  backgroundColor: options.backgroundColor,
                 }"
               />
             </div>
 
             <div class="hidden md:block lg:hidden">
               <VueSignaturePad
-                ref="signatureTablet" height="400px" width="695px" :max-width="options.maxWidth"
-                :clear-on-resize="false" :min-width="options.minWidth" :options="{
-                  penColor: options.penColor, backgroundColor: options.backgroundColor,
+                ref="signatureTablet"
+                height="400px"
+                width="695px"
+                :max-width="options.maxWidth"
+                :clear-on-resize="false"
+                :min-width="options.minWidth"
+                :options="{
+                  penColor: options.penColor,
+                  backgroundColor: options.backgroundColor,
                 }"
               />
             </div>
 
             <div class="block md:hidden">
               <VueSignaturePad
-                ref="signature" height="400px" width="250px" :max-width="options.maxWidth"
-                :clear-on-resize="false" :min-width="options.minWidth" :options="{
-                  penColor: options.penColor, backgroundColor: options.backgroundColor,
+                ref="signature"
+                height="400px"
+                width="250px"
+                :max-width="options.maxWidth"
+                :clear-on-resize="false"
+                :min-width="options.minWidth"
+                :options="{
+                  penColor: options.penColor,
+                  backgroundColor: options.backgroundColor,
                 }"
               />
             </div>
 
-            <div class="absolute md:hidden flex flex-col space-y-2 top-3 right-4">
+            <div
+              class="absolute md:hidden flex flex-col space-y-2 top-3 right-4"
+            >
               <button
-                type="button" class="grid p-2 bg-white rounded-md shadow-md place-items-center"
+                type="button"
+                class="grid p-2 bg-white rounded-md shadow-md place-items-center"
                 @click="handleUndo"
               >
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                >
                   <path
-                    fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    fill="none"
+                    stroke="#000"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
                     d="M10 8H5V3m.291 13.357a8 8 0 1 0 .188-8.991"
                   />
                 </svg>
               </button>
               <button
-                type="button" class="grid p-2 bg-white rounded-md shadow-md place-items-center"
+                type="button"
+                class="grid p-2 bg-white rounded-md shadow-md place-items-center"
                 @click="handleClearCanvas"
               >
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 14 14">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 14 14"
+                >
                   <path
-                    fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round"
+                    fill="none"
+                    stroke="#000"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
                     d="M11.5 8.5h-9l-.76 3.8a1 1 0 0 0 .21.83a1 1 0 0 0 .77.37h8.56a1.002 1.002 0 0 0 .77-.37a1.001 1.001 0 0 0 .21-.83zm0-3a1 1 0 0 1 1 1v2h-11v-2a1 1 0 0 1 1-1H4a1 1 0 0 0 1-1v-2a2 2 0 1 1 4 0v2a1 1 0 0 0 1 1zm-3 8V11"
                   />
                 </svg>
               </button>
               <button
-                type="button" class="grid p-2 bg-white rounded-md shadow-md place-items-center"
+                type="button"
+                class="grid p-2 bg-white rounded-md shadow-md place-items-center"
                 @click="handleSaveSignature('image/jpeg')"
               >
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                >
                   <path
                     fill="#000"
                     d="M21 7v14H3V3h14zm-2 .85L16.15 5H5v14h14zM12 18q1.25 0 2.125-.875T15 15t-.875-2.125T12 12t-2.125.875T9 15t.875 2.125T12 18m-6-8h9V6H6zM5 7.85V19V5z"
@@ -471,34 +526,61 @@ onMounted(() => {
               </button>
             </div>
 
-            <div class="absolute md:block lg:hidden flex flex-col space-y-2 top-3 right-4">
+            <div
+              class="absolute md:block lg:hidden flex flex-col space-y-2 top-3 right-4"
+            >
               <button
-                type="button" class="grid p-2 bg-white rounded-md shadow-md place-items-center"
+                type="button"
+                class="grid p-2 bg-white rounded-md shadow-md place-items-center"
                 @click="handleUndoTablet"
               >
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                >
                   <path
-                    fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    fill="none"
+                    stroke="#000"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
                     d="M10 8H5V3m.291 13.357a8 8 0 1 0 .188-8.991"
                   />
                 </svg>
               </button>
               <button
-                type="button" class="grid p-2 bg-white rounded-md shadow-md place-items-center"
+                type="button"
+                class="grid p-2 bg-white rounded-md shadow-md place-items-center"
                 @click="handleClearCanvasTablet"
               >
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 14 14">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 14 14"
+                >
                   <path
-                    fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round"
+                    fill="none"
+                    stroke="#000"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
                     d="M11.5 8.5h-9l-.76 3.8a1 1 0 0 0 .21.83a1 1 0 0 0 .77.37h8.56a1.002 1.002 0 0 0 .77-.37a1.001 1.001 0 0 0 .21-.83zm0-3a1 1 0 0 1 1 1v2h-11v-2a1 1 0 0 1 1-1H4a1 1 0 0 0 1-1v-2a2 2 0 1 1 4 0v2a1 1 0 0 0 1 1zm-3 8V11"
                   />
                 </svg>
               </button>
               <button
-                type="button" class="grid p-2 bg-white rounded-md shadow-md place-items-center"
+                type="button"
+                class="grid p-2 bg-white rounded-md shadow-md place-items-center"
                 @click="handleSaveSignatureTablet"
               >
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                >
                   <path
                     fill="#000"
                     d="M21 7v14H3V3h14zm-2 .85L16.15 5H5v14h14zM12 18q1.25 0 2.125-.875T15 15t-.875-2.125T12 12t-2.125.875T9 15t.875 2.125T12 18m-6-8h9V6H6zM5 7.85V19V5z"
@@ -507,34 +589,61 @@ onMounted(() => {
               </button>
             </div>
 
-            <div class="absolute lg:block flex flex-col space-y-2 top-3 right-4">
+            <div
+              class="absolute lg:block flex flex-col space-y-2 top-3 right-4"
+            >
               <button
-                type="button" class="grid p-2 bg-white rounded-md shadow-md place-items-center"
+                type="button"
+                class="grid p-2 bg-white rounded-md shadow-md place-items-center"
                 @click="handleUndoLaptop"
               >
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                >
                   <path
-                    fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    fill="none"
+                    stroke="#000"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
                     d="M10 8H5V3m.291 13.357a8 8 0 1 0 .188-8.991"
                   />
                 </svg>
               </button>
               <button
-                type="button" class="grid p-2 bg-white rounded-md shadow-md place-items-center"
+                type="button"
+                class="grid p-2 bg-white rounded-md shadow-md place-items-center"
                 @click="handleClearCanvasLaptop"
               >
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 14 14">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 14 14"
+                >
                   <path
-                    fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round"
+                    fill="none"
+                    stroke="#000"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
                     d="M11.5 8.5h-9l-.76 3.8a1 1 0 0 0 .21.83a1 1 0 0 0 .77.37h8.56a1.002 1.002 0 0 0 .77-.37a1.001 1.001 0 0 0 .21-.83zm0-3a1 1 0 0 1 1 1v2h-11v-2a1 1 0 0 1 1-1H4a1 1 0 0 0 1-1v-2a2 2 0 1 1 4 0v2a1 1 0 0 0 1 1zm-3 8V11"
                   />
                 </svg>
               </button>
               <button
-                type="button" class="grid p-2 bg-white rounded-md shadow-md place-items-center"
+                type="button"
+                class="grid p-2 bg-white rounded-md shadow-md place-items-center"
                 @click="handleSaveSignatureLaptop()"
               >
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                >
                   <path
                     fill="#000"
                     d="M21 7v14H3V3h14zm-2 .85L16.15 5H5v14h14zM12 18q1.25 0 2.125-.875T15 15t-.875-2.125T12 12t-2.125.875T9 15t.875 2.125T12 18m-6-8h9V6H6zM5 7.85V19V5z"
@@ -544,7 +653,9 @@ onMounted(() => {
             </div>
           </div>
         </div>
-        <div class="flex items-center justify-between w-full p-3 bg-white rounded-md">
+        <div
+          class="flex items-center justify-between w-full p-3 bg-white rounded-md"
+        >
           <div>
             <h1 class="text-lg">
               Choose pen color
@@ -553,14 +664,26 @@ onMounted(() => {
           <div class="flex items-center space-x-4">
             <div v-for="color in colors" :key="color.color">
               <button
-                type="button" :style="`background: ${color.color}`"
-                class="grid w-8 h-8 rounded-full place-items-center" @click="options.penColor = color.color"
+                type="button"
+                :style="`background: ${color.color}`"
+                class="grid w-8 h-8 rounded-full place-items-center"
+                @click="options.penColor = color.color"
               >
                 <p v-if="options.penColor === color.color">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 48 48">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="15"
+                    height="15"
+                    viewBox="0 0 48 48"
+                  >
                     <path
-                      fill="#ffffff" fill-rule="evenodd" stroke="#ffffff" stroke-linecap="round"
-                      stroke-linejoin="round" stroke-width="4" d="m4 24l5-5l10 10L39 9l5 5l-25 25z"
+                      fill="#ffffff"
+                      fill-rule="evenodd"
+                      stroke="#ffffff"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="4"
+                      d="m4 24l5-5l10 10L39 9l5 5l-25 25z"
                       clip-rule="evenodd"
                     />
                   </svg>
@@ -570,27 +693,41 @@ onMounted(() => {
           </div>
         </div>
 
-        <div class="flex items-center justify-between w-full p-3 bg-white rounded-md">
+        <div
+          class="flex items-center justify-between w-full p-3 bg-white rounded-md"
+        >
           <div>
             <h1 class="text-lg">
               Choose maximum pen line thickness
             </h1>
           </div>
           <div class="flex items-center space-x-4">
-            <input v-model="options.maxWidth" type="range" :min="0" :max="10">
-            <p> {{ options.maxWidth }}</p>
+            <input
+              v-model="options.maxWidth"
+              type="range"
+              :min="0"
+              :max="10"
+            >
+            <p>{{ options.maxWidth }}</p>
           </div>
         </div>
 
-        <div class="flex items-center justify-between w-full p-3 bg-white rounded-md">
+        <div
+          class="flex items-center justify-between w-full p-3 bg-white rounded-md"
+        >
           <div>
             <h1 class="text-lg">
               Choose minimum pen line thickness
             </h1>
           </div>
           <div class="flex items-center space-x-4">
-            <input v-model="options.minWidth" type="range" :min="0" :max="10">
-            <p> {{ options.minWidth }}</p>
+            <input
+              v-model="options.minWidth"
+              type="range"
+              :min="0"
+              :max="10"
+            >
+            <p>{{ options.minWidth }}</p>
           </div>
         </div>
       </div>
@@ -606,7 +743,8 @@ onMounted(() => {
           Register it as a local component
         </h3>
         <p class="text-sm">
-          Register it as a local component as shown below and you are good to go 🎉:
+          Register it as a local component as shown below and you are
+          good to go 🎉:
         </p>
         <CustomCodeBlock :code="localImportSnippet" lang="javascript" />
       </div>
@@ -617,10 +755,13 @@ onMounted(() => {
         </h3>
 
         <p class="text-sm">
-          You can get the svgs from the <a
-            href="https://icones.js.org/" target="_blank"
+          You can get the svgs from the
+          <a
+            href="https://icones.js.org/"
+            target="_blank"
             class="text-blue-500 underline transition-all duration-200 ease-in hover:text-blue-600"
-          >Icones</a> library.
+          >Icones</a>
+          library.
         </p>
 
         <CustomCodeBlock
@@ -795,7 +936,8 @@ function handleSaveSignature() {
       </div>
     </div>
   </div>
-</template>" lang="vue"
+</template>"
+          lang="vue"
         />
       </div>
 
@@ -804,13 +946,16 @@ function handleSaveSignature() {
           Nuxt 3
         </h3>
         <p class="text-sm">
-          If you are using Nuxt 3, you can simply install it by using nuxi as shown below and also add TypeScript as a
-          dev
+          If you are using Nuxt 3, you can simply install it by using
+          nuxi as shown below and also add TypeScript as a dev
           dependency:
         </p>
         <div class="flex flex-col space-y-3">
           <CustomCodeBlock :code="nuxiSnippet" lang="bash" />
-          <CustomCodeBlock code="npm install --save-dev Typescript" lang="bash" />
+          <CustomCodeBlock
+            code="npm install --save-dev Typescript"
+            lang="bash"
+          />
         </div>
       </div>
 
@@ -833,15 +978,18 @@ function handleSaveSignature() {
           TypeScript
         </h3>
         <p class="text-sm">
-          If you are using TypeScript, below are the types that can be imported from `@selemondev/vue3-signature-pad` as
-          shown
+          If you are using TypeScript, below are the types that can be
+          imported from `@selemondev/vue3-signature-pad` as shown
           below:
         </p>
         <CustomCodeBlock
           code="import type { CanvasOptions, Props, WaterMarkObj, ..... } from @selemondev/vue3-signature-pad"
           lang="typescript"
         />
-        <CustomCodeBlock :code="vueSignaturePadTypes" lang="typescript" />
+        <CustomCodeBlock
+          :code="vueSignaturePadTypes"
+          lang="typescript"
+        />
       </div>
 
       <div class="space-y-3">
@@ -852,59 +1000,104 @@ function handleSaveSignature() {
           <div class="relative bg-gray-100 rounded-md">
             <div class="hidden lg:block">
               <VueSignaturePad
-                ref="signatureWaterMarkLaptop" height="400px" width="950px" :max-width="options.maxWidth"
-                :clear-on-resize="false" :min-width="options.minWidth" :options="{
-                  penColor: options.penColor, backgroundColor: options.backgroundColor,
+                ref="signatureWaterMarkLaptop"
+                height="400px"
+                width="950px"
+                :max-width="options.maxWidth"
+                :clear-on-resize="false"
+                :min-width="options.minWidth"
+                :options="{
+                  penColor: options.penColor,
+                  backgroundColor: options.backgroundColor,
                 }"
               />
             </div>
 
             <div class="hidden md:block lg:hidden">
               <VueSignaturePad
-                ref="signatureWaterMarkTablet" height="400px" width="695px" :max-width="options.maxWidth"
-                :clear-on-resize="false" :min-width="options.minWidth" :options="{
-                  penColor: options.penColor, backgroundColor: options.backgroundColor,
+                ref="signatureWaterMarkTablet"
+                height="400px"
+                width="695px"
+                :max-width="options.maxWidth"
+                :clear-on-resize="false"
+                :min-width="options.minWidth"
+                :options="{
+                  penColor: options.penColor,
+                  backgroundColor: options.backgroundColor,
                 }"
               />
             </div>
 
             <div class="block md:hidden">
               <VueSignaturePad
-                ref="signatureWaterMark" height="400px" width="250px" :max-width="options.maxWidth"
-                :clear-on-resize="false" :min-width="options.minWidth" :options="{
-                  penColor: options.penColor, backgroundColor: options.backgroundColor,
+                ref="signatureWaterMark"
+                height="400px"
+                width="250px"
+                :max-width="options.maxWidth"
+                :clear-on-resize="false"
+                :min-width="options.minWidth"
+                :options="{
+                  penColor: options.penColor,
+                  backgroundColor: options.backgroundColor,
                 }"
               />
             </div>
 
-            <div class="absolute md:hidden flex flex-col space-y-2 top-3 right-4">
+            <div
+              class="absolute md:hidden flex flex-col space-y-2 top-3 right-4"
+            >
               <button
-                type="button" class="grid p-2 bg-white rounded-md shadow-md place-items-center"
+                type="button"
+                class="grid p-2 bg-white rounded-md shadow-md place-items-center"
                 @click="handleWaterMarkUndo"
               >
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                >
                   <path
-                    fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    fill="none"
+                    stroke="#000"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
                     d="M10 8H5V3m.291 13.357a8 8 0 1 0 .188-8.991"
                   />
                 </svg>
               </button>
               <button
-                type="button" class="grid p-2 bg-white rounded-md shadow-md place-items-center"
+                type="button"
+                class="grid p-2 bg-white rounded-md shadow-md place-items-center"
                 @click="handleClearWaterMarkCanvas"
               >
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 14 14">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 14 14"
+                >
                   <path
-                    fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round"
+                    fill="none"
+                    stroke="#000"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
                     d="M11.5 8.5h-9l-.76 3.8a1 1 0 0 0 .21.83a1 1 0 0 0 .77.37h8.56a1.002 1.002 0 0 0 .77-.37a1.001 1.001 0 0 0 .21-.83zm0-3a1 1 0 0 1 1 1v2h-11v-2a1 1 0 0 1 1-1H4a1 1 0 0 0 1-1v-2a2 2 0 1 1 4 0v2a1 1 0 0 0 1 1zm-3 8V11"
                   />
                 </svg>
               </button>
               <button
-                type="button" class="grid p-2 bg-white rounded-md shadow-md place-items-center"
+                type="button"
+                class="grid p-2 bg-white rounded-md shadow-md place-items-center"
                 @click="handleSaveWaterMarkSignature()"
               >
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                >
                   <path
                     fill="#000"
                     d="M21 7v14H3V3h14zm-2 .85L16.15 5H5v14h14zM12 18q1.25 0 2.125-.875T15 15t-.875-2.125T12 12t-2.125.875T9 15t.875 2.125T12 18m-6-8h9V6H6zM5 7.85V19V5z"
@@ -913,34 +1106,61 @@ function handleSaveSignature() {
               </button>
             </div>
 
-            <div class="absolute md:block lg:hidden flex flex-col space-y-2 top-3 right-4">
+            <div
+              class="absolute md:block lg:hidden flex flex-col space-y-2 top-3 right-4"
+            >
               <button
-                type="button" class="grid p-2 bg-white rounded-md shadow-md place-items-center"
+                type="button"
+                class="grid p-2 bg-white rounded-md shadow-md place-items-center"
                 @click="handleUndoWaterMarkTablet"
               >
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                >
                   <path
-                    fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    fill="none"
+                    stroke="#000"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
                     d="M10 8H5V3m.291 13.357a8 8 0 1 0 .188-8.991"
                   />
                 </svg>
               </button>
               <button
-                type="button" class="grid p-2 bg-white rounded-md shadow-md place-items-center"
+                type="button"
+                class="grid p-2 bg-white rounded-md shadow-md place-items-center"
                 @click="handleClearCanvasWaterMarkTablet"
               >
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 14 14">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 14 14"
+                >
                   <path
-                    fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round"
+                    fill="none"
+                    stroke="#000"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
                     d="M11.5 8.5h-9l-.76 3.8a1 1 0 0 0 .21.83a1 1 0 0 0 .77.37h8.56a1.002 1.002 0 0 0 .77-.37a1.001 1.001 0 0 0 .21-.83zm0-3a1 1 0 0 1 1 1v2h-11v-2a1 1 0 0 1 1-1H4a1 1 0 0 0 1-1v-2a2 2 0 1 1 4 0v2a1 1 0 0 0 1 1zm-3 8V11"
                   />
                 </svg>
               </button>
               <button
-                type="button" class="grid p-2 bg-white rounded-md shadow-md place-items-center"
+                type="button"
+                class="grid p-2 bg-white rounded-md shadow-md place-items-center"
                 @click="handleSaveSignatureWaterMarkTablet()"
               >
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                >
                   <path
                     fill="#000"
                     d="M21 7v14H3V3h14zm-2 .85L16.15 5H5v14h14zM12 18q1.25 0 2.125-.875T15 15t-.875-2.125T12 12t-2.125.875T9 15t.875 2.125T12 18m-6-8h9V6H6zM5 7.85V19V5z"
@@ -949,34 +1169,61 @@ function handleSaveSignature() {
               </button>
             </div>
 
-            <div class="absolute lg:block flex flex-col space-y-2 top-3 right-4">
+            <div
+              class="absolute lg:block flex flex-col space-y-2 top-3 right-4"
+            >
               <button
-                type="button" class="grid p-2 bg-white rounded-md shadow-md place-items-center"
+                type="button"
+                class="grid p-2 bg-white rounded-md shadow-md place-items-center"
                 @click="handleUndoWaterMarkLaptop"
               >
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                >
                   <path
-                    fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    fill="none"
+                    stroke="#000"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
                     d="M10 8H5V3m.291 13.357a8 8 0 1 0 .188-8.991"
                   />
                 </svg>
               </button>
               <button
-                type="button" class="grid p-2 bg-white rounded-md shadow-md place-items-center"
+                type="button"
+                class="grid p-2 bg-white rounded-md shadow-md place-items-center"
                 @click="handleClearCanvasWaterMarkLaptop"
               >
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 14 14">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 14 14"
+                >
                   <path
-                    fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round"
+                    fill="none"
+                    stroke="#000"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
                     d="M11.5 8.5h-9l-.76 3.8a1 1 0 0 0 .21.83a1 1 0 0 0 .77.37h8.56a1.002 1.002 0 0 0 .77-.37a1.001 1.001 0 0 0 .21-.83zm0-3a1 1 0 0 1 1 1v2h-11v-2a1 1 0 0 1 1-1H4a1 1 0 0 0 1-1v-2a2 2 0 1 1 4 0v2a1 1 0 0 0 1 1zm-3 8V11"
                   />
                 </svg>
               </button>
               <button
-                type="button" class="grid p-2 bg-white rounded-md shadow-md place-items-center"
+                type="button"
+                class="grid p-2 bg-white rounded-md shadow-md place-items-center"
                 @click="handleSaveSignatureWaterMarkLaptop()"
               >
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                >
                   <path
                     fill="#000"
                     d="M21 7v14H3V3h14zm-2 .85L16.15 5H5v14h14zM12 18q1.25 0 2.125-.875T15 15t-.875-2.125T12 12t-2.125.875T9 15t.875 2.125T12 18m-6-8h9V6H6zM5 7.85V19V5z"
@@ -994,45 +1241,44 @@ function handleSaveSignature() {
 <style>
 /* Dark Mode */
 @media (prefers-color-scheme: dark) {
-
-  .shiki,
-  .shiki span {
-    color: var(--shiki-dark) !important;
-    background-color: var(--shiki-dark-bg) !important;
-    /* Optional, if you also want font styles */
-    font-style: var(--shiki-dark-font-style) !important;
-    font-weight: var(--shiki-dark-font-weight) !important;
-    text-decoration: var(--shiki-dark-text-decoration) !important;
-  }
+    .shiki,
+    .shiki span {
+        color: var(--shiki-dark) !important;
+        background-color: var(--shiki-dark-bg) !important;
+        /* Optional, if you also want font styles */
+        font-style: var(--shiki-dark-font-style) !important;
+        font-weight: var(--shiki-dark-font-weight) !important;
+        text-decoration: var(--shiki-dark-text-decoration) !important;
+    }
 }
 
 html.dark .shiki,
 html.dark .shiki span {
-  color: var(--shiki-dark) !important;
-  background-color: var(--shiki-dark-bg) !important;
-  font-style: var(--shiki-dark-font-style) !important;
-  font-weight: var(--shiki-dark-font-weight) !important;
-  text-decoration: var(--shiki-dark-text-decoration) !important;
+    color: var(--shiki-dark) !important;
+    background-color: var(--shiki-dark-bg) !important;
+    font-style: var(--shiki-dark-font-style) !important;
+    font-weight: var(--shiki-dark-font-weight) !important;
+    text-decoration: var(--shiki-dark-text-decoration) !important;
 }
 
 .shiki--code--block {
-  width: 100%;
+    width: 100%;
 }
 
 pre {
-  z-index: 1;
-  padding: 16px 24px;
-  border-radius: 10px;
-  overflow-x: auto;
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-  position: relative;
-  background-color: #F9F9F9 !important;
+    z-index: 1;
+    padding: 16px 24px;
+    border-radius: 10px;
+    overflow-x: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    position: relative;
+    background-color: #f9f9f9 !important;
 }
 
 code {
-  display: block;
-  line-height: 1.7;
-  font-size: 15px;
+    display: block;
+    line-height: 1.7;
+    font-size: 15px;
 }
 </style>

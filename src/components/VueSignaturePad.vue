@@ -33,10 +33,10 @@ const props = withDefaults(defineProps<Props>(), {
 })
 
 const emits = defineEmits<{
-  (e: 'beginStroke', val: string): void
-  (e: 'endStroke', val: string): void
-  (e: 'beforeUpdateStroke', val: string): void
-  (e: 'afterUpdateStroke', val: string): void
+  (e: 'beginStroke', val: Signature): void
+  (e: 'endStroke', val: Signature): void
+  (e: 'beforeUpdateStroke', val: Signature): void
+  (e: 'afterUpdateStroke', val: Signature): void
 }>()
 
 const canvasOptions = ref<CanvasOptions>({
@@ -144,7 +144,7 @@ function handleBeginStroke() {
   return canvasOptions.value.signaturePad.addEventListener(
     'beginStroke',
     () => {
-      emits('beginStroke', 'Signature started')
+      emits('beginStroke', canvasOptions.value.signaturePad)
     },
   )
 }
@@ -153,7 +153,7 @@ function handleEndStroke() {
   return canvasOptions.value.signaturePad.addEventListener(
     'endStroke',
     () => {
-      emits('endStroke', 'Signature ended')
+      emits('endStroke', canvasOptions.value.signaturePad)
     },
   )
 }
@@ -162,7 +162,7 @@ function handleBeforeUpdateStroke() {
   return canvasOptions.value.signaturePad.addEventListener(
     'beforeUpdateStroke',
     () => {
-      emits('beforeUpdateStroke', 'Signature before update')
+      emits('beforeUpdateStroke', canvasOptions.value.signaturePad)
     },
   )
 }
@@ -171,7 +171,7 @@ function handleAfterUpdateStroke() {
   return canvasOptions.value.signaturePad.addEventListener(
     'afterUpdateStroke',
     () => {
-      emits('afterUpdateStroke', 'Signature after update')
+      emits('afterUpdateStroke', canvasOptions.value.signaturePad)
     },
   )
 }

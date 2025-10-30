@@ -8,7 +8,6 @@ import type {
   Signature,
   WaterMarkObj,
 } from '../types'
-import { nanoid } from 'nanoid'
 import SignaturePad from 'signature_pad'
 import { onBeforeUnmount, onMounted, ref, watch, watchEffect } from 'vue'
 
@@ -47,7 +46,7 @@ const canvasOptions = ref<CanvasOptions>({
   throttle: 16,
   backgroundColor: props.options.backgroundColor,
   penColor: props.options.penColor,
-  canvasUuid: `canvas${nanoid()}`,
+  canvasUuid: `canvas_${crypto.randomUUID()}`,
 })
 
 function isCanvasEmpty(): boolean {

@@ -198,9 +198,9 @@ export interface Signature {
 }
 
 export interface Props {
-  options: Options
-  width: string
-  height: string
+  options?: Options
+  width?: string
+  height?: string
   minWidth?: number
   maxWidth?: number
   waterMark?: WaterMarkObj

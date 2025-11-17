@@ -100,8 +100,8 @@ export interface PointGroup extends PointGroupOptions {
 }
 
 export interface Options {
-  penColor: string
-  backgroundColor: string
+  penColor?: string
+  backgroundColor?: string
 }
 
 export interface WaterMarkObj {

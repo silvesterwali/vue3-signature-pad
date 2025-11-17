@@ -152,7 +152,7 @@ const localImportSnippet = ref(
   `import { VueSignaturePad } from '@selemondev/vue3-signature-pad'`,
 )
 const nuxiSnippet = ref(
-  `npx nuxi@latest module add @selemondev/nuxt-signature-pad`,
+  `npx nuxi@latest module add nuxt-signature-pad`,
 )
 const vueSignaturePadTypes = ref(`export interface Point {
   x: number

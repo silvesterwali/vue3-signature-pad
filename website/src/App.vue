@@ -992,7 +992,7 @@ function handleSaveSignature() {
                 :clear-on-resize="false"
                 :min-width="options.minWidth"
                 :options="{
-                  penColor: options.penColor
+                  penColor: options.penColor,
                 }"
               />
             </div>
@@ -1020,7 +1020,7 @@ function handleSaveSignature() {
                 :clear-on-resize="false"
                 :min-width="options.minWidth"
                 :options="{
-                  penColor: options.penColor
+                  penColor: options.penColor,
                 }"
               />
             </div>

@@ -1,6 +1,29 @@
 # Changelog
 
 
+## v1.6.2
+
+[compare changes](https://github.com/selemondev/vue3-signature-pad/compare/v1.6.1...v1.6.2)
+
+### 💅 Refactors
+
+- 100 refactor: prop types as optional ([0a19bed](https://github.com/selemondev/vue3-signature-pad/commit/0a19bed))
+- Make prop types optional ([5e979bd](https://github.com/selemondev/vue3-signature-pad/commit/5e979bd))
+
+### 📖 Documentation
+
+- **install-size:** Replace badgen badge with img(.)shields(.)io ([f6066df](https://github.com/selemondev/vue3-signature-pad/commit/f6066df))
+
+### 🏡 Chore
+
+- **deps-dev:** Bump shiki from 2.5.0 to 3.14.0 ([59a07c2](https://github.com/selemondev/vue3-signature-pad/commit/59a07c2))
+- **deps-dev:** Bump vite in the npm_and_yarn group across 1 directory ([467c29b](https://github.com/selemondev/vue3-signature-pad/commit/467c29b))
+- Sync version with tag v1.6.1 ([12058fd](https://github.com/selemondev/vue3-signature-pad/commit/12058fd))
+
+### ❤️ Contributors
+
+- Selemondev <selemondev19@gmail.com>
+
 ## v1.6.0
 
 [compare changes](https://github.com/selemondev/vue3-signature-pad/compare/v1.5.1...v1.6.0)

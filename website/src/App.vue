@@ -10,7 +10,6 @@ import PropsTable from './components/PropsTable.vue'
 
 const options = ref({
   penColor: 'rgb(0,0,0)',
-  backgroundColor: 'rgb(255, 255, 255)',
   maxWidth: 2,
   minWidth: 2,
 })
@@ -345,9 +344,9 @@ export interface Signature {
 }
 
 export interface Props {
-  options: Options
-  width: string
-  height: string
+  options?: Options
+  width?: string
+  height?: string
   minWidth?: number
   maxWidth?: number
   waterMark?: WaterMarkObj
@@ -426,10 +425,6 @@ onMounted(() => {
                 :max-width="options.maxWidth"
                 :clear-on-resize="false"
                 :min-width="options.minWidth"
-                :options="{
-                  penColor: options.penColor,
-                  backgroundColor: options.backgroundColor,
-                }"
               />
             </div>
 
@@ -441,10 +436,6 @@ onMounted(() => {
                 :max-width="options.maxWidth"
                 :clear-on-resize="false"
                 :min-width="options.minWidth"
-                :options="{
-                  penColor: options.penColor,
-                  backgroundColor: options.backgroundColor,
-                }"
               />
             </div>
 
@@ -456,10 +447,6 @@ onMounted(() => {
                 :max-width="options.maxWidth"
                 :clear-on-resize="false"
                 :min-width="options.minWidth"
-                :options="{
-                  penColor: options.penColor,
-                  backgroundColor: options.backgroundColor,
-                }"
               />
             </div>
 
@@ -771,10 +758,9 @@ import { VueSignaturePad } from '@selemondev/vue3-signature-pad'
 import type { CanvasSignature } from '@selemondev/vue3-signature-pad'
 
 const options = ref({
-  penColor: 'rgb(0,0,0)',
-  backgroundColor: 'rgb(255, 255, 255)',
-  maxWidth: 2,
-  minWidth: 2,
+  penColor: 'rgb(255,0,0)',
+  maxWidth: 4,
+  minWidth: 4,
 })
 
 const colors = [
@@ -815,8 +801,7 @@ function handleSaveSignature() {
           :max-width='options.maxWidth'
           :min-width='options.minWidth'
           :options='{
-            penColor: options.penColor,
-            backgroundColor: options.backgroundColor,
+            penColor: options.penColor
           }'
         />
 
@@ -1007,8 +992,7 @@ function handleSaveSignature() {
                 :clear-on-resize="false"
                 :min-width="options.minWidth"
                 :options="{
-                  penColor: options.penColor,
-                  backgroundColor: options.backgroundColor,
+                  penColor: options.penColor
                 }"
               />
             </div>
@@ -1023,7 +1007,6 @@ function handleSaveSignature() {
                 :min-width="options.minWidth"
                 :options="{
                   penColor: options.penColor,
-                  backgroundColor: options.backgroundColor,
                 }"
               />
             </div>
@@ -1037,8 +1020,7 @@ function handleSaveSignature() {
                 :clear-on-resize="false"
                 :min-width="options.minWidth"
                 :options="{
-                  penColor: options.penColor,
-                  backgroundColor: options.backgroundColor,
+                  penColor: options.penColor
                 }"
               />
             </div>

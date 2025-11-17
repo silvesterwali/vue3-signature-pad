@@ -7,7 +7,6 @@
 
 ### 💅 Refactors
 
-- 100 refactor: prop types as optional ([0a19bed](https://github.com/selemondev/vue3-signature-pad/commit/0a19bed))
 - Make prop types optional ([5e979bd](https://github.com/selemondev/vue3-signature-pad/commit/5e979bd))
 
 ### 📖 Documentation

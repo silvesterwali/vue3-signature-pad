@@ -1,6 +1,29 @@
 # Changelog
 
 
+## v1.6.3
+
+[compare changes](https://github.com/selemondev/vue3-signature-pad/compare/v1.6.2...v1.6.3)
+
+### 💅 Refactors
+
+- **prop-types:** Make options' properties optional ([38088a7](https://github.com/selemondev/vue3-signature-pad/commit/38088a7))
+- Narrow type guard ([cee3a5a](https://github.com/selemondev/vue3-signature-pad/commit/cee3a5a))
+
+### 📖 Documentation
+
+- Update ([d973c2b](https://github.com/selemondev/vue3-signature-pad/commit/d973c2b))
+- Update CHANGELOG ([b8aadce](https://github.com/selemondev/vue3-signature-pad/commit/b8aadce))
+
+### 🏡 Chore
+
+- Update dependency ([430b5c7](https://github.com/selemondev/vue3-signature-pad/commit/430b5c7))
+- Lint ([93f7fad](https://github.com/selemondev/vue3-signature-pad/commit/93f7fad))
+
+### ❤️ Contributors
+
+- Selemondev <selemondev19@gmail.com>
+
 ## v1.6.2
 
 [compare changes](https://github.com/selemondev/vue3-signature-pad/compare/v1.6.1...v1.6.2)

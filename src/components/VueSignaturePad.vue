@@ -209,6 +209,8 @@ function draw() {
 }
 
 watchEffect(() => {
+  if (!props.options.backgroundColor || !props.options.penColor)
+    return
   // Update penColor
   canvasOptions.value.penColor = props.options.penColor
   canvasOptions.value.signaturePad.penColor = props.options.penColor

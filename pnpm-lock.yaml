@@ -43,8 +43,8 @@ importers:
         specifier: ^0.0.2
         version: 0.0.2
       '@selemondev/vue3-signature-pad':
-        specifier: ^1.4.0
-        version: 1.4.2(vue@3.5.21(typescript@5.9.2))
+        specifier: ^1.6.2
+        version: 1.6.2(vue@3.5.21(typescript@5.9.2))
       shiki-block-vue:
         specifier: ^1.0.5
         version: 1.0.5(@vue/tsconfig@0.7.0(typescript@5.9.2)(vue@3.5.21(typescript@5.9.2)))(vite@7.1.11(@types/node@24.3.1)(jiti@1.21.7)(yaml@2.8.1))(vue-tsc@2.2.10(typescript@5.9.2))(vue@3.5.21(typescript@5.9.2))
@@ -843,8 +843,8 @@ packages:
   '@selemondev/shiki-transformer-copy-button@0.0.2':
     resolution: {integrity: sha512-tBO3XW5BotqwQJUDMK0lJecjhVTff7dCM644dc509IfEjVzB1EsCmjv7d3Ps9JyF1VatSF3gZ7TCOdY+hTxsgw==}
 
-  '@selemondev/vue3-signature-pad@1.4.2':
-    resolution: {integrity: sha512-XDgGmtbeMpC4ooJutTMbDDYRzN76Q62cd/+Rdm9vw2NtF6KRq+z0NJCSrht3g7ozMlDoVY47S82r47lHPqIEaw==}
+  '@selemondev/vue3-signature-pad@1.6.2':
+    resolution: {integrity: sha512-D+LydEbwAWHkTbnvztcjq47CjYyZ5bmu4G7fIaxgZS1HSTEYV68QdyuDG8s1EPw47QpKMV4SVTrX5n7e2hDXHg==}
     peerDependencies:
       vue: ^3.2.0
 
@@ -2029,11 +2029,6 @@ packages:
   nanoid@3.3.11:
     resolution: {integrity: sha512-N8SpfPUnUp1bK+PMYW8qSWdl9U+wwNWI4QKxOYDy9JAro3WMX7p2OeVRF9v+347pnakNevPmiHhNmZ2HbFA76w==}
     engines: {node: ^10 || ^12 || ^13.7 || ^14 || >=15.0.1}
-    hasBin: true
-
-  nanoid@5.1.6:
-    resolution: {integrity: sha512-c7+7RQ+dMB5dPwwCp4ee1/iV/q2P6aK1mTZcfr1BTuVlyW9hJYiMPybJCcnBlQtuSmTIWNeazm/zqNoZSSElBg==}
-    engines: {node: ^18 || >=20}
     hasBin: true
 
   natural-compare@1.4.0:
@@ -3265,9 +3260,8 @@ snapshots:
     dependencies:
       hastscript: 9.0.0
 
-  '@selemondev/vue3-signature-pad@1.4.2(vue@3.5.21(typescript@5.9.2))':
+  '@selemondev/vue3-signature-pad@1.6.2(vue@3.5.21(typescript@5.9.2))':
     dependencies:
-      nanoid: 5.1.6
       signature_pad: 5.1.0
       vue: 3.5.21(typescript@5.9.2)
 
@@ -4753,8 +4747,6 @@ snapshots:
       thenify-all: 1.6.0
 
   nanoid@3.3.11: {}
-
-  nanoid@5.1.6: {}
 
   natural-compare@1.4.0: {}
 

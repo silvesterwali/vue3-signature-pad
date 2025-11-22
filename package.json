@@ -32,7 +32,7 @@
     "dev:site": "pnpm --filter website dev",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "generate:release": "pnpx changelogen@latest --release && npm publish",
+    "generate:release": "pnpx changelogen@latest --release",
     "prepublishOnly": "pnpm build"
   },
   "peerDependencies": {

@@ -1,6 +1,34 @@
 # Changelog
 
 
+## v1.6.4
+
+[compare changes](https://github.com/selemondev/vue3-signature-pad/compare/v1.6.3...v1.6.4)
+
+### 📖 Documentation
+
+- **website:** Update nuxt module name ([22ff8e6](https://github.com/selemondev/vue3-signature-pad/commit/22ff8e6))
+- Add CI badge link to README.md ([ad2e021](https://github.com/selemondev/vue3-signature-pad/commit/ad2e021))
+
+### 🏡 Chore
+
+- **release:** V1.6.3 ([8b4bc17](https://github.com/selemondev/vue3-signature-pad/commit/8b4bc17))
+- **website:** Update dependency ([56afa02](https://github.com/selemondev/vue3-signature-pad/commit/56afa02))
+- **bundler:** Migrate to tsdown ([1d72f36](https://github.com/selemondev/vue3-signature-pad/commit/1d72f36))
+- **workflows:** Add ci and release action ([df549d9](https://github.com/selemondev/vue3-signature-pad/commit/df549d9))
+- **scripts:** Replace tsup with tsdown ([4802725](https://github.com/selemondev/vue3-signature-pad/commit/4802725))
+- **bundler:** No sideEffects ([d7be919](https://github.com/selemondev/vue3-signature-pad/commit/d7be919))
+- **bundler:** Produce tree-shakeable output ([5cb9784](https://github.com/selemondev/vue3-signature-pad/commit/5cb9784))
+- **bundler:** Allow tsdown to generate types and files export paths ([738f4c9](https://github.com/selemondev/vue3-signature-pad/commit/738f4c9))
+- **lint:** Resolve parsing error ([7b32342](https://github.com/selemondev/vue3-signature-pad/commit/7b32342))
+- **workflow:** Update build command ([6ff0947](https://github.com/selemondev/vue3-signature-pad/commit/6ff0947))
+- **script:** Remove publish command ([c8250a0](https://github.com/selemondev/vue3-signature-pad/commit/c8250a0))
+
+### ❤️ Contributors
+
+- Selemondev <selemondev19@gmail.com>
+- Selemon Brahanu ([@selemondev](https://github.com/selemondev))
+
 ## v1.6.3
 
 [compare changes](https://github.com/selemondev/vue3-signature-pad/compare/v1.6.2...v1.6.3)

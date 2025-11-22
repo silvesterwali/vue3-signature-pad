@@ -8,5 +8,6 @@ export default defineConfig({
   minify: false,
   platform: 'neutral',
   plugins: [Vue({ isProduction: true })],
+  exports: true,
   dts: { vue: true },
 })

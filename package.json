@@ -36,9 +36,10 @@
     "dist"
   ],
   "scripts": {
-    "build": "tsup --onSuccess \"pnpm build:dts\"",
+    "build": "tsdown",
     "build:dts": "vue-tsc --declaration --emitDeclarationOnly",
-    "dev": "tsup --watch --onSuccess \"pnpm build:dts && pnpm --filter website dev\"",
+    "dev:lib": "tsdown --watch ./src/index.ts",
+    "dev:site": "pnpm --filter website dev",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "generate:release": "pnpx changelogen@latest --release && npm publish",

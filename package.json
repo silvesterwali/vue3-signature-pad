@@ -45,6 +45,7 @@
     "generate:release": "pnpx changelogen@latest --release && npm publish",
     "prepublishOnly": "pnpm build"
   },
+  "sideEffects": false,
   "peerDependencies": {
     "vue": "^3.2.0"
   },

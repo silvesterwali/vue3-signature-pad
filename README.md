@@ -7,7 +7,6 @@
 <!-- automd:badges color="green" license name="@selemondev/vue3-signature-pad" codecov bundlephobia packagephobia -->
 [![CI](https://github.com/selemondev/vue3-signature-pad/actions/workflows/ci.yml/badge.svg)](https://github.com/selemondev/vue3-signature-pad/actions/workflows/ci.yml)
 [![npm version](https://img.shields.io/npm/v/@selemondev/vue3-signature-pad?color=green)](https://npmjs.com/package/@selemondev/vue3-signature-pad)
-[![npm downloads](https://img.shields.io/npm/dm/@selemondev/vue3-signature-pad?color=green)](https://npm.chart.dev/@selemondev/vue3-signature-pad)
 [![bundle size](https://img.shields.io/bundlephobia/minzip/@selemondev/vue3-signature-pad?color=green)](https://bundlephobia.com/package/@selemondev/vue3-signature-pad)
 [![install size](https://img.shields.io/npm/dm/%40selemondev%2Fvue3-signature-pad
 )](https://packagephobia.com/result?p=@selemondev/vue3-signature-pad)

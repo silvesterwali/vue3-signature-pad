@@ -968,8 +968,8 @@ function handleSaveSignature() {
           below:
         </p>
         <CustomCodeBlock
-          code="import type { CanvasOptions, Props, WaterMarkObj, ..... } from @selemondev/vue3-signature-pad"
-          lang="typescript"
+          code="import type { CanvasOptions, Props, WaterMarkObj, ..... } from '@selemondev/vue3-signature-pad'"
+          lang="ts"
         />
         <CustomCodeBlock
           :code="vueSignaturePadTypes"

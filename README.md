@@ -45,106 +45,84 @@ deno install @selemondev/vue3-signature-pad
 
 ```vue
 <script setup lang="ts">
-import { VueSignaturePad } from '@selemondev/vue3-signature-pad'
-import { onMounted, ref } from 'vue'
+import { VueSignaturePad } from "@selemondev/vue3-signature-pad";
+import type { Signature } from "@selemondev/vue3-signature-pad";
+import { ref, useTemplateRef } from "vue";
 
 const state = ref({
-  options: {
-    penColor: 'rgb(0, 0, 0)',
-    backgroundColor: 'rgb(255, 255, 255)'
-  },
-  disabled: false,
-})
+    disabled: false,
+});
 
-const colors = [
-  {
-    color: 'rgb(51, 133, 255)'
-  },
+const signature = useTemplateRef<Signature>("signature");
 
-  {
-    color: 'rgb(85, 255, 51)'
-  },
+function dataURLToBlob(dataURL: string) {
+    // Code taken from https://github.com/ebidel/filer.js
+    const parts = dataURL.split(";base64,");
+    const contentType = parts[0]?.split(":")[1];
+    const raw = window.atob(parts[1]!);
+    const rawLength = raw.length;
+    const uInt8Array = new Uint8Array(rawLength);
 
-  {
-    color: 'rgb(255, 85, 51)'
-  }
-]
+    for (let i = 0; i < rawLength; ++i) {
+        uInt8Array[i] = raw.charCodeAt(i);
+    }
 
-const activeColor = ref()
+    return new Blob([uInt8Array], { type: contentType });
+}
+function handleSave(dataURL: string, downloadFormat: string) {
+    if (signature.value?.isCanvasEmpty())
+        return alert("Signature cannot be empty!");
+    const _data_url = signature.value?.toDataURL(dataURL);
+    const blob = dataURLToBlob(_data_url!);
+    const url = window.URL.createObjectURL(blob);
 
-const signature = ref()
+    const a = document.createElement("a");
+    a.style = "display: none";
+    a.href = url;
+    a.download = downloadFormat;
 
-function handleSave(format?: string) {
-  return alert(signature.value.saveSignature(format))
+    document.body.appendChild(a);
+    a.click();
+    window.URL.revokeObjectURL(url);
 }
 function handleClear() {
-  return signature.value.clearCanvas()
+    return signature.value?.clearCanvas();
 }
 function handleUndo() {
-  return signature.value.undo()
-}
-
-function handleDisabled() {
-  return state.value.disabled = !state.value.disabled
-}
-
-function handleFromDataURL(url: string) {
-  return signature.value.fromDataURL(url)
-}
-
-function handleAddWaterMark() {
-  return signature.value.addWaterMark({
-    text: 'Selemondev', // watermark text, > default ''
-    font: '20px Arial', // mark font, > default '20px sans-serif'
-    style: 'all', // fillText and strokeText,  'all'/'stroke'/'fill', > default 'fill
-    fillStyle: 'red', // fillcolor, > default '#333'
-    strokeStyle: 'blue', // strokecolor, > default '#333'
-    x: 100, // fill positionX, > default 20
-    y: 200, // fill positionY, > default 20
-    sx: 100, // stroke positionX, > default 40
-    sy: 200 // stroke positionY, > default 40
-  })
+    return signature.value?.undo();
 }
 </script>
 
 <template>
-  <div class="grid place-items-center w-full min-h-screen">
-    <div class="flex flex-col items-center space-y-4">
-      <div class="bg-gray-100 p-6">
-        <VueSignaturePad
-          ref="signature" height="400px" width="1280px" :max-width="2" :min-width="2"
-          :disabled="state.disabled"
-        />
-      </div>
+    <div class="grid place-items-center w-full min-h-screen">
+        <div class="flex flex-col items-center space-y-4">
+            <div class="bg-gray-100 p-6">
+                <VueSignaturePad
+                    ref="signature"
+                    height="400px"
+                    width="1280px"
+                    :max-width="2"
+                    :min-width="2"
+                    :disabled="state.disabled"
+                />
+            </div>
 
-      <button type="button" @click="handleSave('image/jpeg')">
-        Save
-      </button>
-      <button type="button" @click="handleClear">
-        Clear
-      </button>
-      <button type="button" @click="handleUndo">
-        Undo
-      </button>
-      <button type="button" @click="handleDisabled">
-        Disabled
-      </button>
-      <button type="button" @click="handleFromDataURL('https://github.com/selemondev.png')">
-        FromData URL
-      </button>
-      <button type="button" @click="handleAddWaterMark">
-        Add watermark
-      </button>
+            <button type="button" @click="handleSave('image/jpeg', 'signature-pad.jpg')">
+                Save
+            </button>
+            <button type="button" @click="handleClear">Clear</button>
+            <button type="button" @click="handleUndo">Undo</button>
+        </div>
     </div>
-  </div>
 </template>
+
 ```
 
 ## Props
 
 | name          |     type      |           default         |       description             |
 |:-------------:|:-------------:|:-------------------------:|   :-----------------:         |
-| option        | `Object`     | {penColor:"rgb(0, 0, 0)", backgroundColor:"rgb(255,255,255)"} |     penColor and backgroundColor  |
+| option        | `Object`     | {penColor:"oklch(0.0% 0.000 0.0)", backgroundColor:"oklch(100.0% 0.000 89.9)"} |     penColor and backgroundColor  |
 |        width      | `String`      |         "100%"            | Pad width  |
 |        height     | `String`      |         "100%"            | Pad height |
 |        throttle   | `Number`      |         16                | Draw the next point at most once per every x milliseconds |

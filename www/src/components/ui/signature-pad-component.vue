@@ -5,70 +5,80 @@ import { colorParam } from "../../store/useStore";
 import type { Signature } from "../../../../src/types";
 import { on } from "../../events/event-bus";
 const options = ref({
-	penColor: "#000",
-	backgroundColor: "oklch(100.0% 0.000 89.9)",
-	maxWidth: 2,
-	minWidth: 2,
+    penColor: "#000",
+    backgroundColor: "oklch(100.0% 0.000 89.9)",
+    maxWidth: 2,
+    minWidth: 2,
 });
 const signature = useTemplateRef<Signature>("signature");
 function dataURLToBlob(dataURL: string) {
-	// Code taken from https://github.com/ebidel/filer.js
-	const parts = dataURL.split(";base64,");
-	const contentType = parts[0].split(":")[1];
-	const raw = window.atob(parts[1]);
-	const rawLength = raw.length;
-	const uInt8Array = new Uint8Array(rawLength);
+    // Code taken from https://github.com/ebidel/filer.js
+    const parts = dataURL.split(";base64,");
+    const contentType = parts[0].split(":")[1];
+    const raw = window.atob(parts[1]);
+    const rawLength = raw.length;
+    const uInt8Array = new Uint8Array(rawLength);
 
-	for (let i = 0; i < rawLength; ++i) {
-		uInt8Array[i] = raw.charCodeAt(i);
-	}
+    for (let i = 0; i < rawLength; ++i) {
+        uInt8Array[i] = raw.charCodeAt(i);
+    }
 
-	return new Blob([uInt8Array], { type: contentType });
+    return new Blob([uInt8Array], { type: contentType });
 }
-async function handleSave() {
-	if (signature.value?.isCanvasEmpty())
-		return alert("Signature cannot be empty!");
-	const dataURL = signature.value?.toDataURL();
-	const blob = dataURLToBlob(dataURL!);
-	const url = window.URL.createObjectURL(blob);
+async function handleSave(dataURL: string, downloadFormat: string) {
+    if (signature.value?.isCanvasEmpty())
+        return alert("Signature cannot be empty!");
+    const _data_url = signature.value?.toDataURL(dataURL);
+    const blob = dataURLToBlob(_data_url!);
+    const url = window.URL.createObjectURL(blob);
 
-	const a = document.createElement("a");
-	a.style = "display: none";
-	a.href = url;
-	a.download = "signature-pad.png";
+    const a = document.createElement("a");
+    a.style = "display: none";
+    a.href = url;
+    a.download = downloadFormat;
 
-	document.body.appendChild(a);
-	a.click();
-	window.URL.revokeObjectURL(url);
+    document.body.appendChild(a);
+    a.click();
+    window.URL.revokeObjectURL(url);
 }
 
 function handleUndo() {
-	return signature.value?.undo();
+    return signature.value?.undo();
 }
 const color = ref(colorParam.get());
-onMounted(() => {
-	const cleanups = [
-		colorParam.subscribe((v) => (color.value = v)),
-		on("save-signature", handleSave),
-		on("undo-signature", handleUndo),
-	];
+let cleanups: Array<() => void> = [];
 
-	onUnmounted(() => {
-		cleanups.forEach((fn) => fn());
-	});
+onMounted(() => {
+  cleanups = [
+    colorParam.subscribe((v) => (color.value = v)),
+    on("save-signature-as-png", () => handleSave("", "signature-pad.png")),
+    on("save-signature-as-jpg", () =>
+      handleSave("image/jpeg", "signature-pad.jpg")
+    ),
+    on("save-signature-as-svg", () =>
+      handleSave("image/svg+xml", "signature.svg")
+    ),
+    on("undo-signature", handleUndo),
+  ];
+});
+
+onUnmounted(() => {
+  cleanups.forEach((fn) => fn());
 });
 
 watch(
-	color,
-	(newColor) => {
-		options.value.penColor = newColor;
-	},
-	{ immediate: true },
+    color,
+    (newColor) => {
+        options.value.penColor = newColor;
+    },
+    { immediate: true },
 );
 </script>
 
 <template>
-    <div class="border border-gray-100 rounded-lg shadow-md p-1">
+    <div
+        class="border border-gray-100 rounded-lg shadow-md p-1"
+    >
         <VueSignaturePad
             ref="signature"
             height="350px"

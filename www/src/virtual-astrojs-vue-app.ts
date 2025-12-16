@@ -10,4 +10,3 @@ import type { App } from "vue";
 export async function setup(_app: App) {
 	// No-op: the docs site does not need extra Vue app wiring.
 }
-

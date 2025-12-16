@@ -97,8 +97,8 @@
 	.secondary-text {
 		@apply text-[#515158];
 	}
-	
+
 	.icon {
-	@apply text-gray-600 hover:text-black transition-colors duration-200 ease-in
+		@apply text-gray-600 hover:text-black transition-colors duration-200 ease-in;
 	}
 }

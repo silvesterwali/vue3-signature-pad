@@ -132,7 +132,7 @@ export interface Signature {
 		color: string;
 		points: Point[];
 	}>;
-  resizeCanvas: () => void;
+	resizeCanvas: () => void;
 	_isEmpty: boolean;
 	_lastVelocity: number;
 	_lastWidth: number;

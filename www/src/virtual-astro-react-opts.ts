@@ -2,4 +2,3 @@
 // The docs site doesn't use custom React integration options, so an empty
 // object is sufficient.
 export default {};
-

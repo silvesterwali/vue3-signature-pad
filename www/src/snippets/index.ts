@@ -403,4 +403,4 @@ export interface CanvasOptions {
   option: Options
   canvasUuid: string
 }
-`
+`;

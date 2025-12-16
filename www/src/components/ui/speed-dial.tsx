@@ -328,6 +328,8 @@ function SpeedDialTrigger(props: React.ComponentProps<typeof Button>) {
 		<Button
 			type="button"
 			role="button"
+			aria-label="trigger-menu"
+			aria-labelledby="trigger-menu"
 			id={triggerId}
 			aria-controls={contentId}
 			aria-expanded={open}

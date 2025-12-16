@@ -129,6 +129,7 @@ function handleUndo() {
 |        maxWidth   | `Number`      |         2                 | Maximum thickness of the pen line |
 |        minWidth   | `Number`      |         2                 | Minimum thickness of the pen line |
 |  clearOnResize  | `Boolean`     |          false          |Clear canvas on window resize|
+|  scaleOnResize  | `Boolean`     |          true          |When true, scales the signature image to fit new canvas dimensions on resize. When false, redraws using original stroke data without distortion (useful for orientation changes on mobile devices)|
 |  waterMark  | `Object`     |          {}          |Add addWaterMark |
 |  disabled  | `Boolean`     |          false          |Disable canvas |
 |  defaultUrl  | `String`     |          ""          |Show image by default |

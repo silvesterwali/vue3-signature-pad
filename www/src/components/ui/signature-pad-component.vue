@@ -5,7 +5,7 @@ import { colorParam } from "../../store/useStore";
 import type { Signature } from "../../../../src/types";
 import { on } from "../../events/event-bus";
 const options = ref({
-    penColor: "#000",
+    penColor: "oklch(0.0% 0.000 0.0)",
     backgroundColor: "oklch(100.0% 0.000 89.9)",
     maxWidth: 2,
     minWidth: 2,
@@ -25,7 +25,7 @@ function dataURLToBlob(dataURL: string) {
 
     return new Blob([uInt8Array], { type: contentType });
 }
-async function handleSave(dataURL: string, downloadFormat: string) {
+function handleSave(dataURL: string, downloadFormat: string) {
     if (signature.value?.isCanvasEmpty())
         return alert("Signature cannot be empty!");
     const _data_url = signature.value?.toDataURL(dataURL);

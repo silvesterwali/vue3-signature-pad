@@ -1,0 +1,114 @@
+---
+import Layout from "../layouts/default.astro";
+import SignaturePadComponent from "../components/ui/signature-pad-component.vue";
+import { SpeedDialMenuComponent } from "../components/ui/speed-dial-menu";
+import {
+    typesSnippet,
+    localImportSnippet,
+    usageSnippet,
+    nuxiSnippet,
+    installCmd,
+} from "../snippets";
+import CustomCodeBlock from "../components/ui/custom-code-block.vue";
+import TwitterIcon from "../icons/twitter-icon.vue";
+import GithubIcon from "../icons/github-icon.vue";
+import UIContainer from "../components/ui/ui-container.astro";
+---
+
+<Layout>
+    <div class="flex flex-col items-center space-y-1">
+        <h1 class="font-semibold text-xl lg:text-4xl">Signature Pad</h1>
+        <h3 class="secondary-text">
+            A beautiful signature pad component for Vue 3.
+        </h3>
+    </div>
+    <div class="grid place-items-center">
+        <div class="relative h-87.5">
+            <SignaturePadComponent client:only="vue" />
+            <div class="absolute right-3 top-75">
+                <SpeedDialMenuComponent client:only="react" />
+            </div>
+        </div>
+    </div>
+
+    <div class="pt-3 flex flex-col space-y-2">
+        <h1 class="font-normal text-lg">Installation</h1>
+        <CustomCodeBlock client:only="vue" lang="bash" code={installCmd} />
+    </div>
+
+    <UIContainer>
+        <h1 class="font-normal text-lg">Register it as a local component</h1>
+        <h3 class="secondary-text text-sm">
+            Register it as a local component as shown below and you are good to
+            go 🎉:
+        </h3>
+        <CustomCodeBlock
+            client:only="vue"
+            lang="bash"
+            code={localImportSnippet}
+        />
+    </UIContainer>
+    <UIContainer>
+        <h1 class="font-normal text-lg">Usage</h1>
+        <CustomCodeBlock
+            client:only="vue"
+            line-numbers={true}
+            lang="vue"
+            code={usageSnippet}
+        />
+    </UIContainer>
+    <UIContainer>
+        <h1 class="font-normal text-lg">Nuxt 3</h1>
+        <h3 class="secondary-text text-sm">
+            If you are using Nuxt 3, you can simply install it by using nuxi as
+            shown below:
+        </h3>
+        <CustomCodeBlock client:only="vue" lang="bash" code={nuxiSnippet} />
+    </UIContainer>
+    <UIContainer>
+        <h3 class="secondary-text text-sm">
+            Add TypeScript as a dev dependency:
+        </h3>
+        <CustomCodeBlock
+            client:only="vue"
+            lang="bash"
+            code={`npm install --save-dev typescript`}
+        />
+    </UIContainer>
+    <UIContainer>
+        <h1 class="font-normal text-lg">Typescript</h1>
+        <h3 class="secondary-text text-sm">
+            Below are the types that can be imported from the package:
+        </h3>
+        <CustomCodeBlock
+            client:only="vue"
+            lang="bash"
+            code={`import type { CanvasOptions, Props, WaterMarkObj, ..... } from '@selemondev/vue3-signature-pad'`}
+        />
+    </UIContainer>
+    <UIContainer>
+        <h3 class="secondary-text text-sm">
+            If you prefer the full internal schema (advanced):
+        </h3>
+        <CustomCodeBlock
+            client:only="vue"
+            lang="ts"
+            line-numbers={true}
+            code={typesSnippet}
+        />
+    </UIContainer>
+    <div class="flex flex-col space-y-1">
+        <h1 class="font-normal text-lg">Options</h1>
+        <h3 class="secondary-text text-sm">
+            You can check out the props and events <a
+                href="https://github.com/selemondev/vue3-signature-pad?tab=readme-ov-file#props"
+                class="text-blue-500 hover:text-blue-600 transition-colors duration-200 ease-in decoration-dotted underline-offset-[5px] underline"
+                >here</a
+            >
+        </h3>
+    </div>
+    <div class="flex items-center space-x-2 py-6">
+        <a href="https://github.com/selemondev"><GithubIcon class="icon" /></a>
+        <a href="https://twitter.com/selemondev"><TwitterIcon class="icon" /></a>
+    </div>
+</Layout>

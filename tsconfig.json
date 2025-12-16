@@ -1,12 +1,24 @@
 {
-  "extends": "./tsconfig.base.json",
-  "compilerOptions": {
-    "declaration": true,
-    "declarationDir": "./dist",
-    "declarationMap": true,
-    "emitDeclarationOnly": true,
-    "isolatedModules": true
-  },
-  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue", "env.d.ts"],
-  "exclude": ["website"]
+	"extends": ["./tsconfig.base.json", "astro/tsconfigs/strict"],
+	"compilerOptions": {
+		"paths": {
+			"@/*": ["./src/*"]
+		},
+		"allowImportingTsExtensions": true,
+		"declaration": true,
+		"declarationDir": "./dist",
+		"declarationMap": true,
+		"emitDeclarationOnly": true,
+		"isolatedModules": true
+	},
+	"include": [
+		"src/**/*.ts",
+		"src/**/*.d.ts",
+		"src/**/*.tsx",
+		"src/**/*.vue",
+		"env.d.ts",
+		".astro/types.d.ts",
+		"**/*"
+	],
+	"exclude": ["www", "dist"]
 }

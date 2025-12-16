@@ -22,6 +22,7 @@ const props = withDefaults(defineProps<Props>(), {
     disabled: false,
     clearOnResize: false,
     defaultUrl: "",
+    scaleOnResize: true,
 });
 const emits = defineEmits<{
     (e: "beginStroke", val: Signature): void;
@@ -143,9 +144,14 @@ function resizeCanvas() {
     if (!c) return;
 
     let url: string | undefined;
+    let pointData: Point[][] | undefined;
 
     if (!isCanvasEmpty()) {
-        url = saveSignature();
+        if (props.scaleOnResize) {
+            url = saveSignature();
+        } else {
+            pointData = canvasOptions.value.signaturePad.toData();
+        }
     }
 
     const ratio = Math.max(window.devicePixelRatio || 1, 1);
@@ -164,8 +170,14 @@ function resizeCanvas() {
 
     clearCanvas();
 
-    if (!props.clearOnResize && url) {
-        fromDataURL(url);
+    if (!props.clearOnResize) {
+        if (props.scaleOnResize && url) {
+          
+            fromDataURL(url);
+        } else if (!props.scaleOnResize && pointData) {
+          
+            canvasOptions.value.signaturePad.fromData(pointData);
+        }
     }
 
     if (props.waterMark && Object.keys(props.waterMark).length) {

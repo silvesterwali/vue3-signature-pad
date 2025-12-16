@@ -209,6 +209,7 @@ export interface Props {
 	disabled?: boolean;
 	clearOnResize?: boolean;
 	defaultUrl?: string;
+	scaleOnResize?: boolean;
 }
 
 export interface CanvasOptions extends Options {

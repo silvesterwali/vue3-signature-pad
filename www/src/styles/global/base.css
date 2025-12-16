@@ -84,7 +84,7 @@
 		cursor: pointer;
 	}
 	body {
-		@apply font-geist min-h-screen w-full px-2 my-36 text-zinc-800 bg-gray-50;
+		@apply font-geist min-h-screen w-full px-2 mt-26 mb-6 text-zinc-800 bg-gray-50;
 	}
 	::-webkit-scrollbar {
 		display: none;

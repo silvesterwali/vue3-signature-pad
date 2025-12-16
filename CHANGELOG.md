@@ -1,6 +1,44 @@
 # Changelog
 
 
+## v1.7.0
+
+[compare changes](https://github.com/selemondev/vue3-signature-pad/compare/v1.6.4...v1.7.0)
+
+### 🚀 Enhancements
+
+- Migrate to Astro ([55af4a3](https://github.com/selemondev/vue3-signature-pad/commit/55af4a3))
+- Configure Vercel adapter and update SSR settings in Astro config ([8be815a](https://github.com/selemondev/vue3-signature-pad/commit/8be815a))
+- Add support for various download formats ([b5bf5f0](https://github.com/selemondev/vue3-signature-pad/commit/b5bf5f0))
+
+### 💅 Refactors
+
+- Codebase ([94157c8](https://github.com/selemondev/vue3-signature-pad/commit/94157c8))
+- **signature-pad:** Use a single canvas instance ([6ad8f57](https://github.com/selemondev/vue3-signature-pad/commit/6ad8f57))
+
+### 📖 Documentation
+
+- Remove duplicate NPM downloads badge from README ([b23410f](https://github.com/selemondev/vue3-signature-pad/commit/b23410f))
+
+### 🏡 Chore
+
+- **release:** V1.6.4 ([6f02772](https://github.com/selemondev/vue3-signature-pad/commit/6f02772))
+- Update syntax highlighting ([f266d04](https://github.com/selemondev/vue3-signature-pad/commit/f266d04))
+- Update dependencies ([ce56227](https://github.com/selemondev/vue3-signature-pad/commit/ce56227))
+- Add .vercel dir to gitignore ([a95e710](https://github.com/selemondev/vue3-signature-pad/commit/a95e710))
+- Cleanup dir ([45a5e10](https://github.com/selemondev/vue3-signature-pad/commit/45a5e10))
+- **workflow:** Update lint command ([d515235](https://github.com/selemondev/vue3-signature-pad/commit/d515235))
+- Lint codebase ([70857a7](https://github.com/selemondev/vue3-signature-pad/commit/70857a7))
+- **accessibility:** Fix accessibility issues ([2372f2f](https://github.com/selemondev/vue3-signature-pad/commit/2372f2f))
+- **accessibility:** Refactor heading elements and make them follow a sequentially-descending order ([9755c62](https://github.com/selemondev/vue3-signature-pad/commit/9755c62))
+- **accessibility:** Add descriptive text to links ([cbd38e5](https://github.com/selemondev/vue3-signature-pad/commit/cbd38e5))
+- **style:** Body margin and padding ([2e803f0](https://github.com/selemondev/vue3-signature-pad/commit/2e803f0))
+
+### ❤️ Contributors
+
+- Selemondev <selemondev19@gmail.com>
+- Selemon Brahanu ([@selemondev](https://github.com/selemondev))
+
 ## v1.6.4
 
 [compare changes](https://github.com/selemondev/vue3-signature-pad/compare/v1.6.3...v1.6.4)

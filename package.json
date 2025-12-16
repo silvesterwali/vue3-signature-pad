@@ -1,7 +1,7 @@
 {
 	"name": "@selemondev/vue3-signature-pad",
 	"type": "module",
-	"version": "1.6.4",
+	"version": "1.7.0",
 	"private": false,
 	"packageManager": "pnpm@9.15.9",
 	"description": "Vue 3 based smooth signature drawing component ✨",

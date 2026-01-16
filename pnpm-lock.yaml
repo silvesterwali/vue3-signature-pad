@@ -8,9 +8,6 @@ importers:
 
   .:
     dependencies:
-      '@biomejs/biome':
-        specifier: 2.3.10
-        version: 2.3.10
       '@tailwindcss/vite':
         specifier: ^4.1.18
         version: 4.1.18(vite@8.0.0-beta.4(@types/node@25.0.2)(esbuild@0.25.12)(jiti@2.6.1))
@@ -36,6 +33,9 @@ importers:
         specifier: ^7.1.0
         version: 7.1.0(@types/node@25.0.2)(esbuild@0.25.12)(jiti@2.6.1)(vue@3.5.26(typescript@5.9.3))
     devDependencies:
+      '@biomejs/biome':
+        specifier: 2.3.10
+        version: 2.3.10
       '@vue/tsconfig':
         specifier: ^0.7.0
         version: 0.7.0(typescript@5.9.3)(vue@3.5.26(typescript@5.9.3))
@@ -52,7 +52,7 @@ importers:
         specifier: ^3.5.26
         version: 3.5.26(typescript@5.9.3)
       vue-tsc:
-        specifier: ^3.2.2
+        specifier: ^3.1.0
         version: 3.2.2(typescript@5.9.3)
 
   www:
@@ -5123,7 +5123,7 @@ snapshots:
   '@vue/language-core@3.2.2':
     dependencies:
       '@volar/language-core': 2.4.27
-      '@vue/compiler-dom': 3.5.25
+      '@vue/compiler-dom': 3.5.26
       '@vue/shared': 3.5.26
       alien-signals: 3.1.1
       muggle-string: 0.4.1
@@ -7126,7 +7126,7 @@ snapshots:
       '@babel/plugin-syntax-import-meta': 7.10.4(@babel/core@7.28.5)
       '@babel/plugin-transform-typescript': 7.28.5(@babel/core@7.28.5)
       '@vue/babel-plugin-jsx': 1.5.0(@babel/core@7.28.5)
-      '@vue/compiler-dom': 3.5.25
+      '@vue/compiler-dom': 3.5.26
       kolorist: 1.8.0
       magic-string: 0.30.21
       vite: 6.4.1(@types/node@25.0.2)(jiti@2.6.1)(lightningcss@1.30.2)

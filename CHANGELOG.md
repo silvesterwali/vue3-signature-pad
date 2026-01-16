@@ -1,6 +1,23 @@
 # Changelog
 
 
+## v1.7.1
+
+[compare changes](https://github.com/selemondev/vue3-signature-pad/compare/v1.8.0...v1.7.1)
+
+### 🏡 Chore
+
+- Remove typescript installation guide ([ca5d4be](https://github.com/selemondev/vue3-signature-pad/commit/ca5d4be))
+- Update Github link ([bb09584](https://github.com/selemondev/vue3-signature-pad/commit/bb09584))
+- Update dependencies and prevent duplicate installations and instances ([b5d9bbe](https://github.com/selemondev/vue3-signature-pad/commit/b5d9bbe))
+- Lint codebase and move biomejs to devDependencies ([978b662](https://github.com/selemondev/vue3-signature-pad/commit/978b662))
+- **type:** Extend astro tsconfig base ([038a1e0](https://github.com/selemondev/vue3-signature-pad/commit/038a1e0))
+- Add typescript as a dev dependency and install the latest version of tsdown ([236be81](https://github.com/selemondev/vue3-signature-pad/commit/236be81))
+
+### ❤️ Contributors
+
+- Selemondev <selemondev19@gmail.com>
+
 ## v1.7.0
 
 [compare changes](https://github.com/selemondev/vue3-signature-pad/compare/v1.6.4...v1.7.0)

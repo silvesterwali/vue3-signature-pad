@@ -1,6 +1,23 @@
 # Changelog
 
 
+## v1.8.2
+
+[compare changes](https://github.com/selemondev/vue3-signature-pad/compare/1.8.1...v1.8.2)
+
+### 💅 Refactors
+
+- Peer dependencies semver versions ([9220542](https://github.com/selemondev/vue3-signature-pad/commit/9220542))
+
+### 🏡 Chore
+
+- **release:** V1.7.1 ([b681b9a](https://github.com/selemondev/vue3-signature-pad/commit/b681b9a))
+- Update package version ([2d44e05](https://github.com/selemondev/vue3-signature-pad/commit/2d44e05))
+
+### ❤️ Contributors
+
+- Selemondev <selemondev19@gmail.com>
+
 ## v1.7.1
 
 [compare changes](https://github.com/selemondev/vue3-signature-pad/compare/v1.8.0...v1.7.1)

@@ -1,6 +1,21 @@
 # Changelog
 
 
+## v1.8.3
+
+[compare changes](https://github.com/selemondev/vue3-signature-pad/compare/v1.8.2...v1.8.3)
+
+### 🏡 Chore
+
+- **release:** V1.8.2 ([54797ba](https://github.com/selemondev/vue3-signature-pad/commit/54797ba))
+- Add MIT license ([adbffdf](https://github.com/selemondev/vue3-signature-pad/commit/adbffdf))
+- Update dependencies ([e163718](https://github.com/selemondev/vue3-signature-pad/commit/e163718))
+
+### ❤️ Contributors
+
+- Selemon Brahanu ([@selemondev](https://github.com/selemondev))
+- Selemondev <selemondev19@gmail.com>
+
 ## v1.8.2
 
 [compare changes](https://github.com/selemondev/vue3-signature-pad/compare/1.8.1...v1.8.2)

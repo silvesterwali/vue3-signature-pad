@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v1.8.4
+
+[compare changes](https://github.com/selemondev/vue3-signature-pad/compare/v1.8.3...v1.8.4)
+
+### 🏡 Chore
+
+- **release:** V1.8.3 ([4f0ba63](https://github.com/selemondev/vue3-signature-pad/commit/4f0ba63))
+
+### ❤️ Contributors
+
+- Selemon Brahanu ([@selemondev](https://github.com/selemondev))
+
 ## v1.8.3
 
 [compare changes](https://github.com/selemondev/vue3-signature-pad/compare/v1.8.2...v1.8.3)
